@@ -18,12 +18,17 @@ display: block;
 export const Input = styled.input`
   font-size: 20px;
   margin-bottom: 10px;
-    background-color: transparent;
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid yellow;
   outline: none;
-color: yellow;
-caret-color: yellow;
+  color: yellow;
+  caret-color: yellow;
+  &:{
+  background-color: transparent;
+  color: yellow;
+
+}
 `;
 
 

@@ -7,12 +7,7 @@ import { nanoid } from 'nanoid';
 
 export class App extends Component {
   state = {
-    contacts: [
-      // {id:'id-1', name:'Тарас Шевченко', number:'+3333333'},
-      // {id:'id-2', name:'Ліна костенко', number:'+6666666'},
-      // {id:'id-3', name:'Михайло Коцюбинський', number:'+4444444'},
-      // {id:'id-4', name:'Іван Франко', number:'+5555555'},
-    ],
+    contacts: [],
     filter: "",
   }
 
