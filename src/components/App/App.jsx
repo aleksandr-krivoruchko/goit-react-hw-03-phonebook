@@ -8,10 +8,10 @@ import { nanoid } from 'nanoid';
 export class App extends Component {
   state = {
     contacts: [
-      {id:'id-1', name:'Тарас Шевченко', number:'+3333333'},
-      {id:'id-2', name:'Ліна костенко', number:'+6666666'},
-      {id:'id-3', name:'Михайло Коцюбинський', number:'+4444444'},
-      {id:'id-4', name:'Іван Франко', number:'+5555555'},
+      // {id:'id-1', name:'Тарас Шевченко', number:'+3333333'},
+      // {id:'id-2', name:'Ліна костенко', number:'+6666666'},
+      // {id:'id-3', name:'Михайло Коцюбинський', number:'+4444444'},
+      // {id:'id-4', name:'Іван Франко', number:'+5555555'},
     ],
     filter: "",
   }
@@ -57,9 +57,29 @@ deleteContact = (contactId) => {
 }))
 }
 
+  // Жизненный цикл монтирования(получение данных из хранилища)
+  componentDidMount() {
+    const parsedContacts = JSON.parse(localStorage.getItem("contacts"));
+
+    if (parsedContacts) {
+          this.setState({
+      contacts: parsedContacts,
+    })
+    }
+}
+  
+    // Жизненный цикл обновления(запись данных в хранилище)
+  componentDidUpdate(prevProps, prevState) {
+    const { contacts } = this.state;
+
+    if (contacts !== prevState.contacts) {
+     localStorage.setItem("contacts", JSON.stringify(contacts))
+    }
+  }
+  
   render() {
     const { filter } = this.state;
-    
+
     return <Section title="Phonebook">
               <Form onSubmit={this.addContact}></Form>
               <Section title="Contacts">
