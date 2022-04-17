@@ -5,12 +5,11 @@ export const SectionStyle = styled.div`
   margin: 0 auto;
   margin-bottom: 20px;
   padding: 20px;
-
 `;
 
 export const Title = styled.h1`
-font-size: 30px;
+  font-size: 30px;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color:yellow;
+  color: yellow;
 `;

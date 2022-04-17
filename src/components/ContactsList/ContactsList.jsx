@@ -1,14 +1,17 @@
 import PropTypes from 'prop-types';
-import { Contact } from "../Contact/Contact";
+import { Contact } from '../Contact/Contact';
 
 export function ContactsList({ contacts, deleteContact }) {
-
   return (
     <ul>
       {contacts.map(item => (
-      
-          <Contact key={item.number} number={item.number} name={item.name} id={item.id} deleteContact={deleteContact}/>
-        
+        <Contact
+          key={item.number}
+          number={item.number}
+          name={item.name}
+          id={item.id}
+          deleteContact={deleteContact}
+        />
       ))}
     </ul>
   );

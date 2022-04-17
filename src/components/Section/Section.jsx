@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import { SectionStyle, Title } from "./SectionStyle.styled";
+import { SectionStyle, Title } from './SectionStyle.styled';
 
-export function Section({title, children}) {
-	return <SectionStyle>
+export function Section({ title, children }) {
+  return (
+    <SectionStyle>
+      <Title>{title}</Title>
 
-		<Title>{title}</Title>
-
-		{children}
-
-	</SectionStyle>
+      {children}
+    </SectionStyle>
+  );
 }
 
 Section.propTypes = {
