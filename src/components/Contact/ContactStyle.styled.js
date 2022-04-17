@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 
 export const ContactStyle = styled.li`
 display: flex;
-// justify-content: space-between;	
 color: yellow;
 font-size: 20px;
 margin-top: 10px;
